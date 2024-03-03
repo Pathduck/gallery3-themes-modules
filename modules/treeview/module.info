@@ -1,0 +1,7 @@
+name = "Tree View Page"
+description = "Displays links to all albums in the gallery on a seperate page."
+version = 4
+author_name = "itzling"
+author_url = "http://codex.galleryproject.org/User:Itzling"
+info_url = "http://codex.galleryproject.org/Gallery3:Modules:treeview"
+discuss_url = "http://galleryproject.org/node/112461"

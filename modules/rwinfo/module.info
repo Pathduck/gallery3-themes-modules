@@ -1,0 +1,7 @@
+name = "rWInfo"
+description = "Display extra information about photos and albums"
+version = 3
+author_name = "Gallery Team & rWatcher"
+author_url = "http://codex.galleryproject.org/Gallery:Team"
+info_url = "http://codex.galleryproject.org/Gallery3:Modules:rwinfo"
+discuss_url = "http://gallery.menalto.com/forum_module_rwinfo"

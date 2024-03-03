@@ -1,0 +1,91 @@
+/* Tree view page ~~~~~~~~~~~~~~~~~~~~~~~
+ Styles for Treeview (Gallery3 Module)
+ Written by itzling
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#g-treeview-body {
+    font-size: .9em;
+    padding-bottom: 11em;
+}
+
+/* List view ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.g-treeview-root {
+    padding-bottom: 1.5em;
+}
+ul.g-treeview-albumnav {
+    padding-left: 1em;
+}
+li.g-treeview-album {
+    list-style-type: disc;
+    list-style-position: outside;
+}
+.g-treeview-album .g-treeview-details,
+a.node .g-treeview-details,
+a.nodeSel .g-treeview-details {
+    display: none;
+    background-color: #ffffff;
+    padding: .6em .6em;
+    text-align: center;
+    font-size: .8em;
+    max-width: 280px;
+}
+.g-treeview-album .g-treeview-details .g-metadata,
+a.node .g-treeview-details .g-metadata {
+    color: #191919;
+    white-space: normal;
+}
+.g-treeview-album a:hover .g-treeview-details,
+a.node:hover .g-treeview-details {
+    display: block;
+    border: 1px solid #191919;
+    position: fixed !important;
+/*    left: 20em;*/
+    left: 50%;
+    top: 100px;
+    z-index: 1000 !important;
+    border-top-left-radius: .3em;
+    border-top-right-radius: .3em;
+    -moz-border-radius-topleft: .3em;
+    -moz-border-radius-topright: .3em;
+    -webkit-border-radius: .3em;
+    -moz-box-shadow: 0 .12em .3em #191919, 0 .12em .37em #191919;
+    box-shadow: 0 .12em .3em #191919, 0 .12em .37em #191919;
+    -webkit-box-shadow: 0 .12em .3em #191919, 0 .12em .37em #191919;
+}
+
+/* CSS Tree view ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+div.g-treeview-root {
+  float: none;
+  margin-left: .1em;
+}
+.g-treeview-haschildren {
+  background: transparent url(../images/nolines_plus.gif) no-repeat 0 0;
+  padding-left: 18px;
+}
+.g-treeview-item {
+  padding-left: 18px;
+}
+.g-treeview-lv0 {
+  background: none!important;
+  padding-left: 0!important;
+}
+.g-treeview-open { display: block; }
+.g-treeview-lv1 .g-treeview-lv1-children { display: none; }
+.g-treeview-lv1:hover .g-treeview-lv1-children { display: block;}
+.g-treeview-lv2 .g-treeview-lv2-children { display: none; }
+.g-treeview-lv2:hover .g-treeview-lv2-children {  display: block; }
+.g-treeview-lv3 .g-treeview-lv3-children { display: none; }
+.g-treeview-lv3:hover .g-treeview-lv3-children {  display: block; }
+.g-treeview-lv4 .g-treeview-lv4-children { display: none; }
+.g-treeview-lv4:hover .g-treeview-lv4-children {  display: block; }
+.g-treeview-lv5 .g-treeview-lv5-children { display: none; }
+.g-treeview-lv5:hover .g-treeview-lv5-children {  display: block; }
+.g-treeview-lv6 .g-treeview-lv6-children { display: none; }
+.g-treeview-lv6:hover .g-treeview-lv6-children {  display: block; }
+.g-treeview-lv7 .g-treeview-lv7-children { display: none; }
+.g-treeview-lv7:hover .g-treeview-lv7-children {  display: block; }
+.g-treeview-lv8 .g-treeview-lv8-children { display: none; }
+.g-treeview-lv8:hover .g-treeview-lv8-children {  display: block; }
+.g-treeview-lv9 .g-treeview-lv9-children { display: none; }
+.g-treeview-lv9:hover .g-treeview-lv9-children {  display: block; }
+

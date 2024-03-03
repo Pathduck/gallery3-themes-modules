@@ -1,0 +1,7 @@
+name = "Custom Menus"
+description = "Allows Gallery admins to create additional menu and sub-menu items."
+version = 1
+author_name = "rWatcher"
+author_url = "http://codex.gallery2.org/User:RWatcher"
+info_url = "https://gallery3-contrib.gitlab.io/#Documentation:27018362"
+discuss_url = "https://gitlab.com/eric2001/custom_menus/-/issues"
