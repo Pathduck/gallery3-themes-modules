@@ -1,7 +1,7 @@
 # Gallery3 Themes and Modules
 
 ## Modules
-
+```
 albumtree
 arrow_nav
 batchtag
@@ -25,12 +25,13 @@ tag_cloud_page
 themedispatcher
 treeview
 user_info
-
+```
 ## Themes
-
+```
 clean_canvas
 greydragon
 greydragon_wide_wind
 imobile
 smk
 widesmk
+```
