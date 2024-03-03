@@ -2,6 +2,7 @@
 
 ## Modules
 ```
+.not-used
 albumtree
 arrow_nav
 batchtag
@@ -26,6 +27,7 @@ themedispatcher
 treeview
 user_info
 ```
+
 ## Themes
 ```
 clean_canvas
