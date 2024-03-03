@@ -1,0 +1,4 @@
+Grey Dragon Wide Wind Theme Changelog
+
+version 1:
+- initail version from Serge with some tweeks for making it wide.

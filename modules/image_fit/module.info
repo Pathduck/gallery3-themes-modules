@@ -1,0 +1,7 @@
+name = "Image fit"
+description = "Fits the resized image to the available space.  Scale down image if it is too big."
+author_name = "floridave"
+author_url = "http://codex.gallery2.org/User:Floridave"
+info_url = "http://codex.gallery2.org/Gallery3:Modules:image_fit"
+discuss_url = "http://gallery.menalto.com/forum_module_image_fit"
+version = 1

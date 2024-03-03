@@ -1,0 +1,159 @@
+/* COMMON */
+.ui-content {
+    padding: 0px;
+}
+
+.ui-footer {
+    font-size: 10px;
+}
+
+.ui-collapsible-content > .ui-listview {
+    margin: 0 0 0 10px;
+}
+
+.ui-listview > .ui-li-static {
+    padding: 0;
+}
+
+.ui-collapsible-content {
+    padding: 0;
+}
+
+.ui-listview > li h1, .ui-listview > li h2, .ui-listview > li h3, .ui-listview > li h4, .ui-listview > li h5, .ui-listview > li h6 {
+    margin: 0;
+}
+
+.g-footer_text {
+    float: left;
+    padding-left: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.g-first {
+    display: block;
+    float: right;
+    text-align: right;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.hide {
+    display: none;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+img {
+    opacity: 0;
+    transition: opacity .3s ease-in;
+}
+
+/* THUMBNAILS */
+.thumbs
+{
+    color: gray;
+    font-size: 16px;
+    text-shadow: rgba(0, 0, 0, 0.6) 0px -1px 0;
+    padding: 2px;
+}
+
+.thumbnail
+{
+    background:#444;
+    display:block;
+    overflow:hidden;
+    float: left;
+    margin: 2px 2px;
+    height:75px;
+    width:75px;
+    position: relative;
+    text-align: center;
+}
+
+.thumbnail img
+{
+    position: absolute;
+}
+
+.thumb-title {
+    font-size: 10px;
+    line-height: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0,0,0,.25);
+    color: #fff;
+    padding: 4px 10px 5px 10px;
+    width: 58px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.thumb-video {
+    background: url("../images/fotorama.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    background-position: -64px -32px;
+    display: block !important;
+    height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    opacity: 1 !important;
+    width: 32px;
+    left: 50%;
+    top: 50%;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    z-index: 11;
+}
+
+@media only screen and (device-width: 768px) {
+    body {
+        min-height: 916px; /* 63 */
+    }
+
+    body[orient="landscape"]
+    {
+        min-height: 916px; /* 51 */
+    }
+
+    .thumbnail
+    {
+        height:123px;
+        width:123px;
+    }
+
+    .thumb-title {
+        width: 103px;
+    }
+}
+
+/* FOTORAMA */
+
+.fotorama__nav-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fotorama__nav {
+    -webkit-transition: -webkit-transform .33s cubic-bezier(.1, 0, .25, 1), opacity .33s cubic-bezier(.1, 0, .25, 1);
+    transition: transform .33s ease-in, opacity .33s ease-in;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+}
+
+.fotorama__wrap--no-controls .fotorama__nav {
+    -webkit-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+}
+

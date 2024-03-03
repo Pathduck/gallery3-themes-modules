@@ -1,0 +1,7 @@
+name = "Reset counts"
+description = "Reset the item counts on the items and sub-albums."
+version = 2
+author_name = "floridave"
+author_url = "http://codex.gallery2.org/User:Floridave"
+info_url = "http://codex.gallery2.org/Gallery3:Modules:reset_counts"
+discuss_url = "http://gallery.menalto.com/forum_module_reset_counts"
