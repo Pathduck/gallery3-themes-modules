@@ -1,4 +1,7 @@
-modules/:
+# Gallery3 Themes and Modules
+
+## Modules
+
 albumtree
 arrow_nav
 batchtag
@@ -23,7 +26,8 @@ themedispatcher
 treeview
 user_info
 
-themes/:
+## Themes
+
 clean_canvas
 greydragon
 greydragon_wide_wind
