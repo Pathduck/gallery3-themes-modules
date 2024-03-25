@@ -2,19 +2,16 @@
 
 ## Modules
 ```
-.not-used
 albumtree
 arrow_nav
 batchtag
 captionator
-custom_menus
 database_info
 delete_cache
 downloadfullsize
 dupcheck
 exif_gps
 gallerystats
-greydragon
 image_fit
 latestupdates
 moduleorder
