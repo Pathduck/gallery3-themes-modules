@@ -77,7 +77,7 @@ class exif_gps_event_Core {
       db::build()
         ->delete("exif_coordinates")
         ->where("item_id", "=", $item->id)
-        ->execute();
+        ->execute();	
     } else {
       $record = ORM::factory("exif_coordinate")->where("item_id", "=", $item->id)->find();
       if (!$record->loaded()) {
@@ -120,11 +120,13 @@ class exif_gps_event_Core {
     $album_items_count = ORM::factory("item", $album_id)
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->descendants_count();
     $user_items_count = ORM::factory("item")
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->where("items.owner_id", "=", $item->owner_id)
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->count_all();
 
     if (($album_items_count > 0) && (module::get_var("exif_gps", "toolbar_map_album") == true)) {
@@ -165,11 +167,13 @@ class exif_gps_event_Core {
     $album_items_count = ORM::factory("item", $album_id)
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->descendants_count();
     $user_items_count = ORM::factory("item")
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->where("items.owner_id", "=", $item->owner_id)
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->count_all();
 
     if (($album_items_count > 0) && (module::get_var("exif_gps", "toolbar_map_album") == true)) {
@@ -210,11 +214,13 @@ class exif_gps_event_Core {
     $album_items_count = ORM::factory("item", $album_id)
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->descendants_count();
     $user_items_count = ORM::factory("item")
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->where("items.owner_id", "=", $item->owner_id)
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->count_all();
 
     if (($album_items_count > 0) && (module::get_var("exif_gps", "toolbar_map_album") == true)) {
@@ -246,15 +252,14 @@ class exif_gps_event_Core {
       ->join("exif_coordinates", "items.id", "exif_coordinates.item_id")
       ->where("items.owner_id", "=", $data->user->id)
       ->viewable()
+      ->order_by("exif_coordinates.latitude", "ASC")
       ->count_all();
     if ($items_count == 0) {
       return;
     }
 
-    $map_provider_id = module::get_var("exif_gps", "provider");
-
     // Display the map block.
-    $v = new View("$map_provider_id/user_profile_exif_gps.html");
+    $v = new View("user_profile_exif_gps.html");
     $int_map_type = module::get_var("exif_gps", "largemap_maptype");
     if ($int_map_type == 0) $map_type = "ROADMAP";
     if ($int_map_type == 1) $map_type = "SATELLITE";
