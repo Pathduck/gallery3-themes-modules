@@ -53,7 +53,7 @@ class dupcheck_Controller extends Controller {
 
     // Figure out which items to display on this page.
       foreach( db::build()
-	      ->select("item_id")
+	      ->select(array("item_id" => "ANY_VALUE(\"item_id\")"))
 	      ->select(array("C" => "count(\"*\")"))
 	      ->from("fullsize_md5sums")
 	      ->group_by("itemmd5")
