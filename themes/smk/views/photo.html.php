@@ -30,6 +30,11 @@
 
   <?= $theme->paginator() ?>
 
+  <div id="g-info">
+    <h1><?= html::purify($item->title) ?></h1>
+    <div><?= nl2br(html::purify($item->description)) ?></div>
+  </div>
+
   <div id="g-photo">
     <?= $theme->resize_top($item) ?>
     <? if (access::can("view_full", $item)): ?>
@@ -40,11 +45,6 @@
     </a>
     <? endif ?>
     <?= $theme->resize_bottom($item) ?>
-  </div>
-
-  <div id="g-info">
-    <h1><?= html::purify($item->title) ?></h1>
-    <div><?= nl2br(html::purify($item->description)) ?></div>
   </div>
 
   <?= $theme->photo_bottom() ?>
