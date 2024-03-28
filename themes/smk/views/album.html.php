@@ -6,6 +6,8 @@
   <div class="g-description"><?= nl2br(html::purify($item->description)) ?></div>
 </div>
 
+<?= $theme->paginator() ?>
+
 <ul id="g-album-grid" class="ui-helper-clearfix">
 <? if (count($children)): ?>
   <? foreach ($children as $i => $child): ?>
