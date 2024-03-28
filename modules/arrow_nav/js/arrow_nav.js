@@ -5,7 +5,6 @@
 		direction = 'ltr',
 		keyPrevious = 37,
 		keyNext = 39,
-		keyUp = 38,
 		keyDelete = 119,
 		url;
 
@@ -59,10 +58,6 @@
 
 			case keyNext:
 				url = $('.g-paginator .g-text-right a').eq(0).attr("href");
-				break;
-
-			case keyUp:
-				url = $('.g-breadcrumbs li:nth-last-of-type(2) a').eq(0).attr("href");
 				break;
 
 			case keyDelete:
