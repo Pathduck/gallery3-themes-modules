@@ -345,6 +345,7 @@ if (!Array.prototype.pop) {
 |--------------------------------------------------*/
 
 .dtree {
+    font-size: 1.05em;
     white-space: nowrap;
 }
 .dtree img {
@@ -370,7 +371,7 @@ function albumSelect_goToNode(nodeId) {
 document.location = new String('main.php?g2_itemId=__ID__').replace('__ID__', nodeId);
 }
 var albumTree = new dTree('albumTree');
-var albumTree_images = 'https://gallery315.dajavous.com/modules/albumtree/images/'
+var albumTree_images = '<?= item::root()->url() ?>modules/albumtree/images/'
 albumTree.icon = {
 root            : albumTree_images + 'base.gif',
 folder          : albumTree_images + 'folder.gif',
@@ -394,12 +395,12 @@ albumTree.config.closeSameLevel = false;
 albumTree.config.cookiePath = '<?= item::root()->url() ?>';
 albumTree.config.cookieDomain = '';
 { var pf = '<?= item::root()->url() ?>';
-<?
+<?php
 function addtree($album){
 ?>
 albumTree.add(<?= $album->id -1 ?>, <?= $album->parent_id -1 ?>, "<?= html::purify($album->title) ?>", pf+'<?= $album->relative_url() ?>');
-<?
-  foreach ($album->viewable()->children(null, null, array(array("tag_album", "=", "album"))) as $child){
+<?php
+  foreach ($album->viewable()->children(null, null, array(array("type", "=", "album"))) as $child){
     addtree($child);
   }
 }
