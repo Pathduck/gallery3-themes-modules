@@ -116,11 +116,11 @@ class latestupdates_Controller extends Controller {
     // Set up the previous and next page buttons.
     if ($page > 1) {
       $previous_page = $page - 1;
-      $view->previous_page_link = url::site("latestupdates/users/{$str_display_type}/{$user_id}?page={$previous_page}");
+#      $view->previous_page_link = url::site("latestupdates/users/{$str_display_type}/{$user_id}?page={$previous_page}");
     }
     if ($page < $max_pages) {
       $next_page = $page + 1;
-      $view->next_page_link = url::site("latestupdates/users/{$str_display_type}/{$user_id}?page={$next_page}");
+#      $view->next_page_link = url::site("latestupdates/users/{$str_display_type}/{$user_id}?page={$next_page}");
     }
 
     // Set up and display the actual page.
@@ -201,11 +201,11 @@ class latestupdates_Controller extends Controller {
     // Set up the previous and next page buttons.
     if ($page > 1) {
       $previous_page = $page - 1;
-      $view->previous_page_link = url::site("latestupdates/albums/{$item->id}?page={$previous_page}");
+#      $view->previous_page_link = url::site("latestupdates/albums/{$item->id}?page={$previous_page}");
     }
     if ($page < $max_pages) {
       $next_page = $page + 1;
-      $view->next_page_link = url::site("latestupdates/albums/{$item->id}?page={$next_page}");
+#      $view->next_page_link = url::site("latestupdates/albums/{$item->id}?page={$next_page}");
     }
 
     // Set up breadcrumbs.
@@ -290,11 +290,11 @@ class latestupdates_Controller extends Controller {
     // Set up the previous and next page buttons.
     if ($page > 1) {
       $previous_page = $page - 1;
-      $view->previous_page_link = url::site("latestupdates/updates?page={$previous_page}");
+#      $view->previous_page_link = url::site("latestupdates/updates?page={$previous_page}");
     }
     if ($page < $max_pages) {
       $next_page = $page + 1;
-      $view->next_page_link = url::site("latestupdates/updates?page={$next_page}");
+#      $view->next_page_link = url::site("latestupdates/updates?page={$next_page}");
     }
 
     // Set up and display the actual page.
@@ -430,7 +430,6 @@ class latestupdates_Controller extends Controller {
           $count = $item
             ->viewable()
             ->where("type", "!=", "album")
-            ->order_by("created", "DESC")
             ->descendants_count();
         } else {
           $count = ORM::factory("item")
@@ -525,7 +524,6 @@ class latestupdates_Controller extends Controller {
         ->viewable()
         ->merge_where($str_where)
         ->where($str_orderby_field, ">", $item->$str_orderby_field)
-        ->order_by($str_orderby_field, "DESC")
         ->count_all();
     } else {
       if ($str_display_type == "descendants") {
@@ -534,7 +532,6 @@ class latestupdates_Controller extends Controller {
           ->viewable()
           ->where("type", "!=", "album")
           ->where("created", ">", $item->created)
-          ->order_by("created", "DESC")
           ->descendants_count();
       } else {
         $position = ORM::factory("item")
@@ -542,7 +539,6 @@ class latestupdates_Controller extends Controller {
           ->where("owner_id", "=", $user_id)
           ->merge_where($str_where)
           ->where($str_orderby_field, ">", $item->$str_orderby_field)
-          ->order_by($str_orderby_field, "DESC")
           ->count_all();
       }
     }
