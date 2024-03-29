@@ -19,7 +19,7 @@
  */
 class image_fit_theme_Core {
   static function head($theme) {
-    if($theme->page_subtype == "photo") {
+	if($theme->page_subtype == "photo" || $theme->page_subtype == "movie") {
 	  return $theme->script("jquery.imagefit.js");
 	}
   }
@@ -29,9 +29,12 @@ class image_fit_theme_Core {
 	<script type=\"text/javascript\">
 	  $(window).load(function() {
 	  $('#g-photo').imagefit();
+	  $('.g-movie').imagefit();
 	  });
 	</script>
 	<!-- End image fit code -->";
-    return $fit_code;
+    if($theme->page_subtype == "photo" || $theme->page_subtype == "movie") {
+			return $fit_code;
+		}
   }
 }

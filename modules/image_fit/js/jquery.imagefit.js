@@ -28,19 +28,30 @@
 				var container = this;
 				
 				// store list of contained images (excluding those in tables)
-				var imgs = $('img', container).not($("table img"));
-				
+				var imgs = $('img.g-resize');
+				// store list of contained videos
+				var vids = $('div.g-movie');
+
 				// store initial dimensions on each image 
 				imgs.each(function(){
 					$(this).attr('startwidth', $(this).width())
 						.attr('startheight', $(this).height())
 						.css('max-width', $(this).attr('startwidth')+"px");
-				
 					fit.one(this);
 				});
+
+				// store initial dimensions on each video
+				vids.each(function(){
+					$(this).attr('startwidth', $(this).width())
+						.attr('startheight', $(this).height())
+						.css('max-width', $(this).attr('startwidth')+"px");
+					fit.one(this);
+				});
+
 				// Re-adjust when window width is changed
 				$(window).bind('resize', function(){
 					fit.all(imgs);
+					fit.all(vids);
 				});
 			});
 		return this;
