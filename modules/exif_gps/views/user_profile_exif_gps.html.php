@@ -171,9 +171,9 @@
 </style>
 
 <div id="wrapper">
-  <div id="map_canvas" style="width:690px; height:480px;"></div>
-  <div id="over_map" style="width:690px; height:480px;">
-    <p id="exif-gps-status" class="exif-gps-status" style="text-align: center; display: table-cell; vertical-align: middle; width: 690px; height: 480px;">
+  <div id="map_canvas" style="width:100%; height:480px; margin: 0 auto;"></div>
+  <div id="over_map" style="width:100%; height:480px;  display: table;">
+    <p id="exif-gps-status" class="exif-gps-status" style="display: table-cell; text-align: center; vertical-align: middle;">
       <font size="6" color="white"><strong><?= t("Loading..."); ?></strong></font><br /><br />
       <img src="<?= url::file("modules/exif_gps/images/exif_gps-loading-map-large.gif"); ?>" style="vertical-align: middle;"></img>
     </p>
