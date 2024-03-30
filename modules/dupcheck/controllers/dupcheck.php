@@ -74,15 +74,17 @@ class dupcheck_Controller extends Controller {
       ->find_all($page_size, $offset);
 
     // Set up the previous and next page buttons.
-    if ($page > 1) {
-      $previous_page = $page - 1;
-      $view->previous_page_link = url::site("dupcheck/dupes?page={$previous_page}");
-    }
-    if ($page < $max_pages) {
-      $next_page = $page + 1;
-      $view->next_page_link = url::site("dupcheck/dupes?page={$next_page}");
-    }
-
+    // Commented out for causing crash with null assigns
+/**
+*    if ($page > 1) {
+*      $previous_page = $page - 1;
+*      $view->previous_page_link = url::site("dupcheck/dupes?page={$previous_page}");
+*    }
+*    if ($page < $max_pages) {
+*      $next_page = $page + 1;
+*      $view->next_page_link = url::site("dupcheck/dupes?page={$next_page}");
+*    }
+**/
     // Set up and display the actual page.
     $template = new Theme_View("page.html", "collection", "DuplicatePhotos");
     $template->page_title = t("Gallery :: Duplicate Photos");

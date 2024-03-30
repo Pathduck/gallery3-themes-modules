@@ -6,6 +6,8 @@
   <h1><?= html::clean($title) ?></h1>
 </div>
 
+<?= $theme->paginator() ?>
+
 <ul id="g-album-grid" class="ui-helper-clearfix">
   <? foreach ($children as $i => $child): ?>
   <li class="g-item <?= $child->is_album() ? "g-album" : "" ?>">
@@ -49,6 +51,7 @@ foreach( db::build()
   </li>
   <? endforeach ?>
 </ul>
-<?= $theme->dynamic_bottom() ?>
 
 <?= $theme->paginator() ?>
+
+<?= $theme->dynamic_bottom() ?>
