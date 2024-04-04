@@ -39,6 +39,11 @@
     padding-bottom: 0.5em;
 }
 
+/* Hide logo */
+#g-logo {
+	display: none;
+}
+
 .hide {
     display: none;
 }
