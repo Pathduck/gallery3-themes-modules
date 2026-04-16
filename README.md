@@ -5,24 +5,34 @@
 albumtree
 arrow_nav
 batchtag
-captionator
 database_info
 delete_cache
 downloadfullsize
 dupcheck
 exif_gps
 gallerystats
-image_fit
-latestupdates
 moduleorder
 movie_tools
 permissions_dialog_usability
 reset_counts
 rwinfo
-tag_cloud_page
 themedispatcher
 treeview
 user_info
+```
+
+### Unused:
+```
+captionator
+custom_menus
+greydragon
+image_fit
+latestupdates
+navcarousel
+register
+tag_cloud_html5
+tag_cloud_page
+user_albums
 ```
 
 ## Themes
