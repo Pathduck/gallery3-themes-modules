@@ -4,7 +4,7 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 #g-treeview-body {
-    font-size: .9em;
+    font-size: 1em;
     padding-bottom: 11em;
 }
 
@@ -13,6 +13,7 @@
     padding-bottom: 1.5em;
 }
 ul.g-treeview-albumnav {
+    color: white !important;
     padding-left: 1em;
 }
 li.g-treeview-album {
@@ -23,16 +24,19 @@ li.g-treeview-album {
 a.node .g-treeview-details,
 a.nodeSel .g-treeview-details {
     display: none;
-    background-color: #ffffff;
+    background-color: #333333;
     padding: .6em .6em;
     text-align: center;
-    font-size: .8em;
+    font-size: 1em;
     max-width: 280px;
 }
 .g-treeview-album .g-treeview-details .g-metadata,
 a.node .g-treeview-details .g-metadata {
-    color: #191919;
+    color: #999999;
     white-space: normal;
+}
+.g-treeview-album a:hover, a.node:hover {
+    color: white !important;
 }
 .g-treeview-album a:hover .g-treeview-details,
 a.node:hover .g-treeview-details {
