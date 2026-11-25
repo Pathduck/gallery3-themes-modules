@@ -464,6 +464,8 @@ td {
 
 #g-sidebar .g-block-content {
   padding-left: 1em;
+  overflow: clip;
+  overflow-wrap: anywhere;
 }
 
 #g-sidebar #g-image-block {
@@ -485,6 +487,8 @@ td {
   padding: .6em 8px;
   position: relative;
   text-align: center;
+  overflow: clip;
+  overflow-wrap: anywhere;
   width: 213px;
   z-index: 1;
 }
@@ -541,6 +545,8 @@ td {
 #g-item {
   position: relative;
   width: 100%;
+  overflow: clip;
+  overflow-wrap: anywhere;
 }
 
 #g-item #g-photo,
